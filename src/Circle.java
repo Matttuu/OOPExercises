@@ -9,20 +9,21 @@ public class Circle {  // Save as "Circle.java"
     // The default constructor with no argument.
     // It sets the radius and color to their default value.
     public Circle() {
-        radius = 1.0;
-        color = "red";
+        this.radius = 1.0; // "this.radius" refers to the instance variable
+                           // "radius" refers to the method's parameter
+        this.color = "red";
     }
 
     // 2nd constructor with given radius, but color default
-    public Circle(double r) {
-        radius = r;
-        color = "red";
+    public Circle(double radius) {
+        this.radius = radius;
+        this.color = "red";
     }
 
     // 3rd constructor to construct a new instance of Circle with the given radius and color
-    public Circle(double r,  String c) {
-        radius = r;
-        color = c;
+    public Circle(double radius, String color) {
+        this.radius = radius;
+        this.color = color;
     }
 
     // A public method for retrieving the radius
@@ -38,5 +39,15 @@ public class Circle {  // Save as "Circle.java"
     // Getter for instance variable color
     public String getColor() {
         return color;
+    }
+
+    // Setter for instance variable radius
+    public void setRadius(double newRadius) {
+        this.radius = newRadius;
+    }
+
+    // Setter for instance variable color
+    public void setColor(String newColor) {
+        this.color = newColor;
     }
 }

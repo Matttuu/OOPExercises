@@ -26,5 +26,27 @@ public class TestCircle {  // Save as "TestCircle.java"
                 + c3.getColor());
 
 
+        /** 3. public vs. private:
+         *
+         * System.out.println(c3.radius = 3.0);
+         * "Error:(33, 30) java: radius has private access in Circle"
+         *
+         * Radius can only be accessed from the actual class where they are declared.
+         * radius variable is set to private, which means it hides from other classes within the package
+         * This is why we use getters and setters.
+         */
+
+        Circle c4 = new Circle();   // construct an instance of Circle
+        c4.setRadius(5.0);          // change radius
+        System.out.println("radius is: " + c4.getRadius()); // Print radius via getter
+        c4.setColor("yellow");        // Change color
+        System.out.println("color is: " + c4.getColor());   // Print color via getter
+
+        // You cannot do the following because setRadius() returns void,
+        // which cannot be printed.
+        // System.out.println(c4.setRadius(4.0));
+
+
+
     }
 }
