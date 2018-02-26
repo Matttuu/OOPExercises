@@ -5,7 +5,13 @@ public class Author {
     private String email;
     private char gender;
 
+    // Default constructor, with arguements.
+    // Constructor to construct a new instance of Author with the given name, email and gender
     public Author(String name, String email, char gender) {
+
+        this.name = name;
+        this.email = email;
+        this.gender = gender;
 
     }
 
@@ -28,7 +34,7 @@ public class Author {
     // Return a description of this instance in the form of
     // Circle[radius=r,color=c]
     public String toString() {
-        return "Author[name=" + name + " email=" + gender + "]";
+        return "Author[name=" + name + " email=" + email + " gender=" + gender + "]";
     }
 
 
