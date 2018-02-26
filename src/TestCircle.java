@@ -46,6 +46,14 @@ public class TestCircle {  // Save as "TestCircle.java"
         // which cannot be printed.
         // System.out.println(c4.setRadius(4.0));
 
+        Circle c5 = new Circle (5.0);
+        System.out.println(c5.toString()); //Explicit call.
+
+        Circle c6 = new Circle(1.2);
+        System.out.println(c6.toString()); // Explicit call.
+        System.out.println(c6);            // println() calls toString() implicitly, same as above
+        System.out.println("Operator '+' invokes toString() too: " + c6);  // '+' invokes toString() too
+
 
 
     }

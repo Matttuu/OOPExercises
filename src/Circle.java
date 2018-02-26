@@ -31,11 +31,6 @@ public class Circle {  // Save as "Circle.java"
         return radius;
     }
 
-    // A public method for computing the area of circle
-    public double getArea() {
-        return radius*radius*Math.PI;
-    }
-
     // Getter for instance variable color
     public String getColor() {
         return color;
@@ -49,5 +44,16 @@ public class Circle {  // Save as "Circle.java"
     // Setter for instance variable color
     public void setColor(String newColor) {
         this.color = newColor;
+    }
+
+    // Return a description of this instance in the form of
+    // Circle[radius=r,color=c]
+    public String toString() {
+        return "Circle[radius=" + radius + " color=" + color + "]";
+    }
+
+    // A public method for computing the area of circle
+    public double getArea() {
+        return radius*radius*Math.PI;
     }
 }
